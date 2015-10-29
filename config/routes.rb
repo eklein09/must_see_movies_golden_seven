@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get '/directors/new_form' => 'directors#new_form'
   get '/directors/create_row' => 'directors#create_row'
   get '/directors/:id' => 'directors#show'
-  get '/directors/delete_movie/:id' => 'directors#delete_row'
+  get '/directors/delete_director/:id' => 'directors#delete_row'
   get '/directors/:id/edit_form' => 'directors#edit_form'
   get '/directors/:id/edit_row' => 'directors#edit_row'
 
