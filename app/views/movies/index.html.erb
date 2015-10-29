@@ -1,0 +1,68 @@
+<h1>MovieDB</h1>
+
+<a href="/directors/">Directors</a>
+<a href="/movies/">Movies</a>
+<a href="/actors/">Actors</a>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Movies</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <a href="/movies/new_form">Add a New Movie</a>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-2">
+            Image
+        </div>
+        <div class="col-md-1">
+            Title
+        </div>
+        <div class="col-md-1">
+            Year
+        </div>
+        <div class="col-md-1">
+            Duration
+        </div>
+        <div class="col-md-2">
+            Description
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <% @list_of_movies.each do |movie| %>
+    <div class="row">
+        <div class="col-md-2">
+            <img src="<%= movie.image_url %>" class="img-responsive" alt="Movie Image">
+        </div>
+        <div class="col-md-1">
+            <%= movie.title %>
+        </div>
+        <div class="col-md-1"><%= movie.year %></div>
+        <div class="col-md-1"><%= movie.duration %></div>
+        <div class="col-md-2"><%= movie.description %></div>
+        <div class="col-md-1">
+            <a href="/movies/<%= movie.id %>">
+                <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/movies/<%= movie.id %>/edit_form/">
+                <i class="fa fa-pencil"></i>
+            </a>
+            <a href="/movies/delete_movie/<%= movie.id %>">
+                <i class="fa fa-trash"></i>
+            </a>
+        </div>
+    </div>
+    <% end %>
+</div>
