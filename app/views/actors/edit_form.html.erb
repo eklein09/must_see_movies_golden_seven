@@ -7,37 +7,32 @@
 <div class="container">
 
   <div class="page-header">
-    <h1>Edit Movie</h1>
+    <h1>Edit Actor</h1>
   </div>
 
 </div>
 
-<form action="/movies/<%= @current_movie.id %>/edit_row">
+<form action="/actors/<%= @current_actor.id %>/edit_row">
   <div class="form-group">
-    <label for="title">Title</label>
-    <input type="text" class="form-control" id="title" name="title" value="<%= @current_movie.title %>">
+    <label for="dob">DOB</label>
+    <input type="text" class="form-control" id="dob" name="dob" value="<%= @current_actor.dob %>">
   </div>
 
   <div class="form-group">
-    <label for="year">Year</label>
-    <input type="text" class="form-control" id="year" name="year" value="<%= @current_movie.year %>">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" value="<%= @current_actor.name %>">
   </div>
 
   <div class="form-group">
-    <label for="duration">Duration</label>
-    <input type="number" class="form-control" id="duration" name="duration" value="<%= @current_movie.duration %>">
-  </div>
-
-  <div class="form-group">
-    <label for="description">Description</label>
-    <input type="text" class="form-control" id="description" name="description" value="<%= @current_movie.description %>">
+    <label for="bio">Duration</label>
+    <input type="text" class="form-control" id="bio" name="bio" value="<%= @current_actor.bio %>">
   </div>
 
   <div class="form-group">
     <label for="image_url">Image_URL</label>
-    <input type="url" class="form-control" id="image_url" name="image_url" value="<%= @current_movie.image_url %>">
+    <input type="url" class="form-control" id="image_url" name="image_url" value="<%= @current_actor.image_url %>">
   </div>
 
 
-  <button type="submit" class="btn btn-default">Update Movie</button>
+  <button type="submit" class="btn btn-default">Update Actor</button>
 </form>

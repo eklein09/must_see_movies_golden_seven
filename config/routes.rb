@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   get '/actors/new_form' => 'actors#new_form'
   get '/actors/create_row' => 'actors#create_row'
   get '/actors/:id' => 'actors#show'
-  get '/actors/delete_movie/:id' => 'actors#delete_row'
+  get '/actors/delete_actor/:id' => 'actors#delete_row'
   get '/actors/:id/edit_form' => 'actors#edit_form'
   get '/actors/:id/edit_row' => 'actors#edit_row'
 

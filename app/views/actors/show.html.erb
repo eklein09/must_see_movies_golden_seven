@@ -4,17 +4,26 @@
 <a href="/movies/">Movies</a>
 <a href="/actors/">Actors</a>
 
-<h1> Movie #<%= @current_movie.id %></h1>
+<h1> Movie #<%= @current_actor.id %></h1>
 
-<dl class="dl-horizontal">
-  <dt>Title</dt>
-  <dd><%= @current_movie.title %></dd>
-    <dt>Year</dt>
-  <dd><%= @current_movie.year %></dd>
-  <dt>Duration</dt>
-  <dd><%= @current_movie.duration %></dd>
-  <dt>Description</dt>
-  <dd><%= @current_movie.description %></dd>
-   <dt>Image</dt>
-  <dd><img src="<%= @current_movie.image_url %>" class="img-responsive" alt="Movie Image"></dd>
-</dl>
+<div class="container">
+  <div class="row">
+    <div class="col-md-11">
+
+
+
+      <dl class="dl-horizontal">
+        <dt>DOB</dt>
+        <dd><%= @current_actor.dob %></dd>
+        <dt>Name</dt>
+        <dd><%= @current_actor.name %></dd>
+        <dt>Bio</dt>
+        <dd><%= @current_actor.bio %></dd>
+        <dt>Image</dt>
+        <dd><img src="<%= @current_actor.image_url %>" class="img-responsive" alt="Actor Image"></dd>
+      </dl>
+
+    </div>
+  </div>
+</div>
+

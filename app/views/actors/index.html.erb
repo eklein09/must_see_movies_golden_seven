@@ -9,13 +9,13 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Movies</h1>
+            <h1>Actors</h1>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-12">
-            <a href="/movies/new_form">Add a New Movie</a>
+            <a href="/actors/new_form">Add a New Actor</a>
         </div>
     </div>
 
@@ -26,40 +26,36 @@
             Image
         </div>
         <div class="col-md-1">
-            Title
+            DOB
         </div>
         <div class="col-md-1">
-            Year
+            Name
         </div>
-        <div class="col-md-1">
-            Duration
-        </div>
-        <div class="col-md-2">
-            Description
+        <div class="col-md-6">
+            Bio
         </div>
         <div class="col-md-1">
 
         </div>
     </div>
-    <% @list_of_movies.each do |movie| %>
+    <% @list_of_actors.each do |actor| %>
     <div class="row">
         <div class="col-md-2">
-            <img src="<%= movie.image_url %>" class="img-responsive" alt="Movie Image">
+            <img src="<%= actor.image_url %>" class="img-responsive" alt="Movie Image">
         </div>
         <div class="col-md-1">
-            <%= movie.title %>
+            <%= actor.dob %>
         </div>
-        <div class="col-md-1"><%= movie.year %></div>
-        <div class="col-md-1"><%= movie.duration %></div>
-        <div class="col-md-2"><%= movie.description %></div>
+        <div class="col-md-1"><%= actor.name %></div>
+        <div class="col-md-6"><%= actor.bio %></div>
         <div class="col-md-1">
-            <a href="/movies/<%= movie.id %>">
+            <a href="/actors/<%= actor.id %>">
                 <i class="fa fa-search-plus"></i>
             </a>
-            <a href="/movies/<%= movie.id %>/edit_form/">
+            <a href="/actors/<%= actor.id %>/edit_form/">
                 <i class="fa fa-pencil"></i>
             </a>
-            <a href="/movies/delete_movie/<%= movie.id %>">
+            <a href="/actors/delete_actor/<%= actor.id %>">
                 <i class="fa fa-trash"></i>
             </a>
         </div>
